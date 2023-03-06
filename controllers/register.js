@@ -1,8 +1,6 @@
 
 const handleRegister = (req, res, db, bcrypt) => {
     const { email, name, password } = req.body;
-    //this stop submitting blank register
-    //if we wud not return it below it runs anyway otherwise latter
     if( !email || !name || !password ) {
         return res.status(400).json('incorrwct form submission');
     }
